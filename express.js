@@ -31,6 +31,10 @@ app.use('/', userRoutes);
 app.use('/', authRoutes);
 app.use('/', chargerPointsRoutes);
 
+app.get('*', async (req, res) => {
+ res.send('ok')
+});
+
 
 
 app.use((err, req, res, next) => {

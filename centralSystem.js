@@ -75,7 +75,7 @@ export function createServer(server) {
             interval: 30,
           };
         }
-
+        console.log(command)
         await ChargerPoint.findByIdAndUpdate(
           chargerPoint._id,
           getCPData(command),

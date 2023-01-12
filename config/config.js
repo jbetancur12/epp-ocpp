@@ -3,6 +3,7 @@ const config = {
   port: process.env.PORT || 3000,
   jwtSecret: process.env.JWT_SECRET || 'YOUR_secret_key',
   mongoUri:
+  'mongodb+srv://mongo:mongo@cluster0.ooqar.mongodb.net/mern?retryWrites=true&w=majority' ||
     process.env.MONGODB_URI ||
     process.env.MONGO_HOST ||
     'mongodb://' +

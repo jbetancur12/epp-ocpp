@@ -30,10 +30,10 @@ const list = async (req, res) => {
 };
 
 const chargerPointByID = async (req, res, next, id) => {
+    
   try {
-    let chargerPoint = await ChargerPoint.findById(id);
-    console.log(chargerPoint);
-    if (!chargerPoint)
+    let chargerPoint = await ChargerPoint.find({charger_box_id: id});
+     if (!chargerPoint)
       return res.status('400').json({
         error: 'ChargerPoint not found',
       });

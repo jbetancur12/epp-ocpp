@@ -56,9 +56,9 @@ export default class CentralSystem {
       ...(this.options.wsOptions || {}),
     };
 
-    console.log('%ccentralSystem.js line:59 wsOptions', 'color: #007acc;', wsOptions);
+
     this.server = new WebSocket.Server(wsOptions);
-    console.log('%ccentralSystem.js line:61 this.server', 'color: #007acc;', this.server);
+  
     this.server.on('error', (ws, req) => {
       console.info(ws, req);
     });

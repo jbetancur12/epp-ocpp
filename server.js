@@ -20,8 +20,6 @@ process.on('unhandledRejection', function (reason, p) {
 const server = require('http').createServer(app);
 const centralSystem = createServer(server);
 
-console.log('%cserver.js line:22 centraSystem', 'color: #007acc;', centralSystem.options.wsOptions);
-
 // const wss = new WebSocket.Server({ server: server });
 // export { wss };
 // require("./ws");
